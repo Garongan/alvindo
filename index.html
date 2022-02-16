@@ -10,78 +10,139 @@
 
     <title>Alvindo Portofolio</title>
     <style>
-    body, html {
-    height: 100%;
+    .content {
+      background-color: rgba(0, 150, 199, 255);
+    }
+    .navbar {
+      background-color: rgba(0, 119, 182, 255);
+    }
+    .containerPP {
+      position: relative;
+      width: 20%;
+      box-sizing: border-box;
+    }
+    .imagePP {
+      display: block;
+      width: 100%;      
+    }
+    .overlay {
+      position: absolute; 
+      bottom: 0; 
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.5); /* Black see-through */
+      color: #f1f1f1; 
+      width: 100%;
+      transition: .5s ease;
+      opacity:0;
+      color: white;
+      font-size: 20px;
+      padding: 20px;
+      text-align: center;
     }
 
-    .parallax {
-    /* The image used */
-    background-image: url('bg.webp');
-
-    /* Full height */
-    height: 100%; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(75%)
+    .containerPP:hover .overlay {
+      opacity: 1;
     }
-    .about{
-        position: absolute;
-        left: calc(10%);
-        top: 10em;
-    }
-    .thumb{
-        position: absolute;
-        left: calc(10%);
-        top: 40em;
-        width: 50%;
-    }
-    .caption-thumb{
-        position: absolute;
-        left: calc(65%);
-        right: 10%;
-        top: 40em;
+    .bg_info {
+      background-color: rgba(0, 119, 182, 255);
     }
     </style>
   </head>
   <body>
-          <!-- navbar -->
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-              
+    <!-- navbar -->
+        <nav class="navbar">
+          <!-- nav content -->
+            <ul class="nav nav-tabs border-bottom mx-auto" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active bg-transparent" id="Me-tab" data-bs-toggle="tab" data-bs-target="#Me" type="button" role="tab" aria-controls="Me" aria-selected="true">
+                  <p class="fs-1 text-light">Me</p>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link bg-transparent" id="Project-tab" data-bs-toggle="tab" data-bs-target="#MyProject" type="button" role="tab" aria-controls="MyProject" aria-selected="false">
+                  <p class="fs-1 text-light">My Project</p>
+                </button>
+              </li>     
+            </ul>
+        </nav>
+        <!-- content -->
+    <div class="content">
+      <div class="row">
+      <!-- field -->
+        <div class="tab-content" id="myTabContent">
+          <!-- Me -->
+          <div class="tab-pane fade show active" id="Me" role="tabpanel" aria-labelledby="Me-tab">
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <ul class="list-unstyled mx-auto">
+                      <li>
+                        <br>
+                        <div class="containerPP mx-auto"> 
+                          <img src="foto_vindo_background_merah.jpg" alt="poto" class="imagePP">
+                          <div class="overlay">Alvindo Tri Jatmiko</div>
+                        </div>
+                        <br>
+                      </li>
+                      <div class="bg_info">
+                        <li class="ms-1">
+                          <a class="text-light" href="https://www.whatsapp.com/">
+                            <span class="iconify" data-icon="bi:whatsapp"></span>
+                          </a>
+                        </li>
+                        <li class="ms-1">
+                          <a class="text-light" href="https://www.instagram.com/">
+                              <span class="iconify" data-icon="bi:instagram"></span>
+                          </a>
+                        </li>
+                        <li class="ms-1">
+                          <a class="text-light" href="https://web.facebook.com/">
+                              <span class="iconify" data-icon="bx:bxl-facebook"></span>
+                          </a>
+                        </li>
+                      </div>
+                    </ul>
+                  </div>       
+                </div>
             </div>
-          </nav>
-
-          <!-- portofolio -->
-          <div class="row">
-              <!-- introduction -->
-              <div class="col">
-
-              </div>
-              <!-- photos -->
-              <div class="col">
-
-              </div>
           </div>
-
-          <div class="parallax"></div>
-        <p class="fs-1 text-light about">About My, Scroll Down</p>
-        <!-- thumb -->
-            
-
-        <div class="parallax"></div>
-        <a href="https://foowasfull.com">
-            
-        </a>
-    <div class="caption-thumb">
-        <!-- cap -->
-        <p class="fs-1 text-light">Visit FOOWASFULL</p>
-        <p class="text-light">this website has goal that in 2024 people not waste their food, and start feeding other animals</p>
+          <!-- Project -->
+          <div class="tab-pane fade" id="MyProject" role="tabpanel" aria-labelledby="Project-tab">
+            <div class="container">
+              <!-- break -->
+              <br>
+              <!-- ./break -->
+              <div class="row row-cols-1 row-cols-sm-2">
+                <div class="col">
+                  <img src="foowasful.jpeg" alt="poto" width="100%">
+                </div>
+                <div class="col">
+                  <p class="fs-1 text-light">Visit FOOWASFULL</p>
+                  <p class="fs-6 text-light">This website has goal that in 2024 people not waste their food, and start feeding other animals</p>
+                </div>
+              </div>
+              <!-- break -->
+              <br>
+              <!-- ./break -->
+              <div class="row row-cols-1 row-cols-sm-2">
+                <div class="col">
+                  <img src="UndangInstan.png" alt="poto" width="100%">
+                </div>
+                <div class="col">
+                  <p class="fs-1 text-light">Visit UndangInstan</p>
+                  <p class="fs-6 text-light">Situs ini memberikan pengalaman mengundang banyak orang menjadi mudah</p>
+                </div>
+              </div>
+              <!-- break -->
+              <br>
+              <!-- ./break -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   </body>
 </html>
