@@ -26,22 +26,19 @@
     .imagePP {
       display: block;
       width: 100%;     
-      border: 5px solid rgba(144, 224, 239, 255); 
+      border: 10px solid rgba(0, 150, 199, 255); 
     }
     .overlay {
-      position: absolute; 
       top: 0; 
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgb(0, 0, 0);
-      background: rgba(0, 0, 0, 0.5); /* Black see-through */
+      background: rgba(0, 0, 0, 0.5);
       width: 100%;
       transition: .5s ease;
       opacity:0;
     }
     .text_overlay {
-      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -52,17 +49,21 @@
     .containerPP:hover .overlay {
       opacity: 1;
     }
-    .bg_info {
-      background-color: rgba(0, 119, 182, 255);
+    .bg_info_medsos {
+      background-color: rgba(72, 202, 228, 255);
       border-radius: 20px;
       width: 80%;
-      z-index: 1;
       top: 150px;
       margin-left: 10%;
       margin-right: 10%;
+      padding: 10px;
     }
-    .link {
+
+    a {
       text-decoration: none;
+    }
+
+    .link {
       background-color: rgba(72, 202, 228, 255);
       padding-left : 1%;
       padding-right: 1%;
@@ -72,12 +73,54 @@
       margin: 10%;
     }
 
+    .iconify {
+      margin: 5%;
+    }
+
+    .bg_info_riwayat {
+      background-color: rgba(72, 202, 228, 255);
+      border-radius: 20px;
+      width: 80%;
+      top: 280px;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding: 10px;
+    }
+    /* for tab */
+    @media only screen and (min-width: 600px) {
+      .bg_info_medsos {
+        top: 210px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width : 90%;
+        padding: 10px;
+      }
+      .bg_info_riwayat {
+        top: 480px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width : 90%;
+        padding: 10px;
+      }
+      .containerPP {
+        margin-top: 40px;
+      }
+    }
+    /* for dekstop */
     @media only screen and (min-width: 1000px) {
-      .bg_info {
+      .bg_info_medsos {
         top: 250px;
         margin-left: 5%;
         margin-right: 5%;
-        width : 90%
+        width : 90%;
+        padding: 10px;
+      }
+      .bg_info_riwayat {
+        top: 550px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width : 90%;
+        padding: 10px;
       }
       .containerPP {
         margin-top: 40px;
@@ -110,33 +153,33 @@
             <div class="container">
               <div class="containerPP mx-auto">
                 <img src="foto_vindo_background_merah.jpg" alt="poto" class="imagePP rounded-circle">
-                <div class="overlay rounded-circle">
-                  <p class="fs-6 text-light text_overlay">Alvindo Tri Jatmiko</p>
+                <div class="overlay position-absolute rounded-circle">
+                  <p class="fs-6 text-light text_overlay position-absolute">Alvindo Tri Jatmiko</p>
                 </div>
               </div>
             </div>
-
-            <ul class="list-unstyled bg_info position-absolute">
+            <!-- medsos -->
+            <div class="bg_info_medsos position-absolute">
               <div class="space_head"></div>
-              
-                <li class="ms-1">
+              <br>
                   <a class="text-light" href="https://www.whatsapp.com/">
                     <span class="iconify" data-icon="bi:whatsapp"></span>
                   </a>
-                </li>
-                <li class="ms-1">
                   <a class="text-light" href="https://www.instagram.com/">
                       <span class="iconify" data-icon="bi:instagram"></span>
                   </a>
-                </li>
-                <li class="ms-1">
                   <a class="text-light" href="https://web.facebook.com/">
                       <span class="iconify" data-icon="bx:bxl-facebook"></span>
                   </a>
-                </li>
+            </div>
+            <!-- riwayat -->
+            <div class="bg_info_riwayat position-absolute">
+              <div class="bg_list">
+                <p class="text-light fs-1" style="text-align: start;">Riwayat Pendidikan</p>
+              </div>
+            </div>
+            <!-- sertifikat -->
 
-              <div class="space_head"></div>
-            </ul>
 
           </div>
           <!-- Project -->
